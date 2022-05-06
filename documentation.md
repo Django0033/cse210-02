@@ -26,6 +26,19 @@
 > #### Methods
 >
 > -   start_game(): None
-> -   get_inputs(): None
+> -   get_input(): None
 > -   do_updates(): None
 > -   do_outputs(): None
+
+## Behavioral Relationship
+
+| Main |              | Director |              | Card                      |
+| ---- | ------------ | -------- | ------------ | ------------------------- |
+|      | start_game() |          | draw()       |                           |
+|      |              |          | get_input()  |                           |
+|      |              |          |              | input('Higher or lower?') |
+|      |              |          | draw()       |                           |
+|      |              |          | do_updates() |                           |
+|      |              |          | get_input()  |                           |
+|      |              |          | get_input()  |                           |
+|      |              |          |              | input('Play again?')      |
